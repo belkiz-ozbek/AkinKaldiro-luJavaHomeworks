@@ -15,6 +15,7 @@ public class MonteCarloPI {
         int n = input.nextInt();
 
         int numberInCircle = 0;
+        long start = System.currentTimeMillis();
 
         for (int i = 0; i < n; i++) {
             double x = Math.random();
@@ -26,10 +27,14 @@ public class MonteCarloPI {
             }
         }
 
+        long end = System.currentTimeMillis();
+        long time = end - start;
+        
         double myPI = 4.0 * numberInCircle / n;
         System.out.println("My pi " + myPI);
         System.out.println("Java's pi " + Math.PI);
-
+        System.out.println("Time is " + time + " ms.");
+        
     }
 
 }
