@@ -1,30 +1,23 @@
-package cartest;
+package composite;
 
+/**
+ *
+ * @author belkizozbek
+ */
 public class Car {
 
-    public String make;
-    public String model;
-    public String year;
-    public int speed;
-    public int distance;
+    String model;
 
-    final public double go(int newDistance) {
-        distance += newDistance;
-        double period = (double) newDistance / speed;
-        return period;
-    }
-
-    final public void accelerate(final int newSpeed) {
-        speed = newSpeed;
-    }
-
-    final public void stop() {
-        speed = 0;
-    }
+    Person owner;
 
     public String getInfo() {
-        String info = "Car Info: " + year + " " + make + " " + model + ". Distance: " + distance + "km. and traveling at " + speed + " kmph";
-        return info;
+        String info = owner.tckn + " " + owner.name + " " + owner.surname + " ";
+
+        if (owner != null) {
+            return info += model + " modelinin sahibidir.";
+        } else {
+            return info += " kişisinin arabası yoktur.";
+        }
     }
 
 }
