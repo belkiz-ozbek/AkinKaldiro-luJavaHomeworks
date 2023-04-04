@@ -1,5 +1,6 @@
 package constructors;
 
+//"this" çağrısı yalnızca constructor'larda yapılır.
 //NO REPEAT
 /**
  *
